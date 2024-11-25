@@ -3,7 +3,7 @@ import yfinance as yf
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
-import matplotlib.pyplot as plt 1 
+import matplotlib.pyplot as plt  # Corrected import statement
 
 def calcular_var(tickers, start_date, end_date, monto, nivel_confianza, pesos=None):
     """Calcula el Valor en Riesgo (VaR) de una cartera.
