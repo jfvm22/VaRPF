@@ -29,8 +29,7 @@ def calcular_var(tickers, start_date, end_date, monto, confidence_level):
     portfolio_return = np.sum(returns.mean()) / len(returns.columns)
 
     # Calcular la volatilidad de la cartera
-    portfolio_std = np.sqrt(np.dot(np.ones(len(returns.columns)).T, np.dot(cov_matrix, np.ones(len(returns.columns))))) / len(returns.columns))
-
+   portfolio_std = np.sqrt(np.dot(np.ones(len(returns.columns)).T, np.dot(cov_matrix, np.ones(len(returns.columns)))))
     # Calcular el VaR de la cartera
     VaR = norm.ppf(1 - confidence_level, loc=portfolio_return, scale=portfolio_std) * monto
 
